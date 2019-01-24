@@ -1,0 +1,16 @@
+<body>
+    <script>
+        document.write("DATA STORED IN <b>LOCAL STORAGE</b><p>");
+        document.write("<table><tr><td>Name</td><td>&emsp;"+localStorage.name+"</td>");
+        document.write("<tr><td>Email ID</td><td>&emsp;"+localStorage.email+"</td>");
+        document.write("<tr><td>Phone no.</td><td>&emsp;"+localStorage.phone+"</td>");
+        document.write("<tr><td>Message sent</td><td>&emsp;"+localStorage.message+"</td></table></h3><p><P>");
+        localStorage.clear();
+        
+        document.write("DATA STORED IN <b>SESSION STORAGE</b><p>");
+        document.write("<table><tr><td>Name</td><td>&emsp;"+sessionStorage.name+"</td>");
+        document.write("<tr><td>Email ID</td><td>&emsp;"+sessionStorage.email+"</td>");
+        document.write("<tr><td>Phone no.</td><td>&emsp;"+sessionStorage.phone+"</td>");
+        document.write("<tr><td>Message sent</td><td>&emsp;"+sessionStorage.message+"</td></table></h3>");
+    </script>
+</body>

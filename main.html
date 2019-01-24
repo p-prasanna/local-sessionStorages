@@ -1,0 +1,76 @@
+<h3> Please enter your contact details below!</h3>
+<form id="contactForm" action="contact.html" method="POST">
+  <table>
+  <tr>
+    <td>
+        <label for="name">Name</label>
+    </td>
+    <td>
+        <input type="text" name="name" id="name">
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <label for="email">Email ID</label>
+    </td>
+    <td>
+        <input type="email" name="email" id="email">
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <label for="phone">Phone no.</label>
+    </td>
+    <td>
+        <input type="phone" name="phone" id="phone">
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <label for="message">Your message</label>
+    </td>
+    <td>
+        <textarea name="message" id="message" rows="4" cols="22"></textarea>
+    </td>
+  </tr>  
+  <tr >
+    <td></td>
+    <td rowspan="2" align="center">
+        <input type="submit" value="Submit!">
+    </td>   
+  </tr>
+</table>
+</form>
+<script>
+ 
+ window.onload = function() {
+
+// Check for LocalStorage support.
+if (localStorage) {
+
+  // Add an event listener for form submissions
+  document.getElementById('contactForm').addEventListener('submit', function() {
+    // Get the value of the name field.
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var message = document.getElementById('message').value;
+
+    // Save the details in localStorage.
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('phone', phone);
+    localStorage.setItem('message', message);
+
+    // Save the details in sessionStorage.
+    sessionStorage.setItem('name', name);
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('phone', phone);
+    sessionStorage.setItem('message', message);
+
+  });
+
+}
+
+}
+</script>
